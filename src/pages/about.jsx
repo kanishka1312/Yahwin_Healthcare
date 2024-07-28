@@ -41,7 +41,7 @@ const About = () => {
         const end = number;
         if (start === end) return;
         let totalDuration = 2000; // total duration of animation in milliseconds
-        let incrementTime = (totalDuration / end) * 2; // time per increment
+        let incrementTime = (totalDuration / end) * 3; // time per increment
 
         const timer = setInterval(() => {
           start += 1;
@@ -75,7 +75,7 @@ const About = () => {
       <div
         className="banner"
         style={{
-          backgroundImage: 'url(${banner})',
+          backgroundImage: `url(${banner})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
@@ -223,7 +223,7 @@ const About = () => {
                 src={journeyImage} 
                 className="journey-image2" 
                 alt="Journey" 
-                // animate={{ scale: [1, 1.1, 1] }}
+                animate={{ scale: [1, 1.1, 1] }}
                 transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
               />
             </div>
@@ -235,4 +235,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About;
